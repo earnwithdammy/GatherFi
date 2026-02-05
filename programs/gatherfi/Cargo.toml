@@ -1,0 +1,39 @@
+[package]
+name = "gatherfi"
+version = "0.1.0"
+description = "GatherFi: Decentralized event funding & NFT ticketing on Solana for Nigeria"
+edition = "2021"
+repository = "https://github.com/yourusername/gatherfi"
+license = "MIT"
+authors = ["Your Name <your.email@example.com>"]
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.31.1"
+anchor-spl = "0.31.1"
+arrayref = "0.3.7"
+
+[dev-dependencies]
+anchor-lang = { version = "0.31.1", features = ["dev"] }
+
+[lib]
+crate-type = ["cdylib", "lib"]
+path = "src/lib.rs"
+crate-name = "gatherfi"
+
+[profile.release]
+overflow-checks = true
+lto = true
+codegen-units = 1
+opt-level = 3
+debug = false
+
+[profile.dev]
+opt-level = 0
+debug = true

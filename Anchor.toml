@@ -1,0 +1,21 @@
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[programs.devnet]
+gatherfi = "GATHRFi1111111111111111111111111111111111111"
+
+[programs.localnet]
+gatherfi = "GATHRFi1111111111111111111111111111111111111"
+
+[scripts]
+test = "anchor test --skip-local-validator"
+build = "anchor build"
+deploy = "anchor deploy"
+upgrade = "anchor upgrade"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[features]
+seeds = false
